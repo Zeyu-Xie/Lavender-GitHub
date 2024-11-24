@@ -41,7 +41,12 @@ def delete_all_deployments(token, owner, repo):
     """
     Delete all deployments of a repository.
     """
+    success = True
     deployments = _get_deployment_list(token, owner, repo)
     for deployment in deployments:
-        delete_deployment(token, owner, repo, deployment["id"])
-    return True
+        try:
+            delete_deployment(token, owner, repo, deployment["id"])
+        except Exception as e:
+            print(e)
+            success = False
+    return success

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="Lavender-GitHub",
-    version="1.0.2",
+    version="1.0.3",
     author="Zeyu Xie",
     author_email="xie.zeyu20@gmail.com",
     description="A python package built with GitHub REST API.",
